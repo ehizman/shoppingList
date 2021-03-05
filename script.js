@@ -41,17 +41,13 @@ var addListAfterKeypress = (e) => {
 	if (inputLength() > 0 && e.keyCode === 13){
 		createListElement();	
 	}
-}
-// var delRemovedItem = value => 
-
+} 
 
 //delete items
 ul.addEventListener("click", function(e) {
 	if (e.target.className == "delBtn"){
 		var li = e.target.parentElement;
-		input_values = input_values.filter(value => {
-			value != li.firstChild;
-		});
+		input_values = input_values.filter(value => value != li.firstChild);
 		ul.removeChild(li);
 		li = null;
 	}
